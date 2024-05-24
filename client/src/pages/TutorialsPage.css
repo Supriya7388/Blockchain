@@ -1,0 +1,106 @@
+/* TutorialsPage.css */
+
+/* Navbar styles */
+/* TutorialsPage.css */
+
+/* Navbar styles */
+.navbar {
+  background-color: #343a40;
+  color: #fff;
+  padding: 15px 20px;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-logo {
+  font-size: 24px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.navbar-menu {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-item {
+  margin-left: 20px;
+}
+
+.navbar-item.active {
+  border-bottom: 2px solid #fff;
+}
+
+.navbar-link {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Search box styles */
+.search-box {
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  padding: 8px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.search-btn {
+  padding: 8px 15px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Tutorials content styles */
+.tutorials-container {
+  padding: 20px;
+  color: #fff; /* Set text color to white */
+}
+
+.tutorials-heading {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.tutorials-paragraph {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.tutorials-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.tutorials-list-item {
+  margin-bottom: 20px;
+}
+
+.tutorial-title {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.tutorial-description {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.tutorials-link {
+  color: #28a745;
+  text-decoration: none;
+  font-size: 14px;
+}

@@ -1,0 +1,47 @@
+/* WalletsPage.css */
+.wallets-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.wallets-heading {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.wallets-list {
+  list-style: none;
+  padding: 0;
+}
+
+.wallets-list-item {
+  margin-bottom: 30px;
+}
+
+.wallets-info {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.wallet-name {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.wallet-description {
+  font-size: 16px;
+}
+
+.download-link {
+  display: block;
+  margin-top: 10px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.download-link:hover {
+  text-decoration: underline;
+}
