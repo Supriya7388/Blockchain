@@ -3,7 +3,7 @@ import { GrMail } from 'react-icons/gr';
 import { AiFillPhone } from 'react-icons/ai';
 import { FaTelegramPlane } from 'react-icons/fa';
 import { RiSendPlaneFill } from 'react-icons/ri';
-import MarketNavbar from './MarketNavbar';
+import Navbar from '../components/Navbar.jsx';
 
 const ContactPage = () => {
   const [name, setName] = useState('');
@@ -22,10 +22,11 @@ const ContactPage = () => {
     setMessage('');
   };
 
-  return (
+  return (<>
+<Navbar />
 
     <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b text-white py-10">
-    <MarketNavbar />
+    
       <h1 className="text-3xl font-bold mb-6">Contact Us</h1>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full md:w-3/4 lg:w-1/2">
         <div className="flex flex-col items-center">
@@ -74,7 +75,7 @@ const ContactPage = () => {
           Send Message
         </button>
       </form>
-    </div>
+    </div></>
   );
 };
 

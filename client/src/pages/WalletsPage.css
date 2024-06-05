@@ -1,4 +1,3 @@
-/* WalletsPage.css */
 .wallets-container {
   max-width: 1000px;
   margin: 0 auto;
@@ -18,12 +17,22 @@
 
 .wallets-list-item {
   margin-bottom: 30px;
+  display: flex;
+  align-items: center; /* Align items vertically centered */
 }
 
 .wallets-info {
   background-color: #f9f9f9;
   padding: 20px;
   border-radius: 5px;
+  flex-grow: 1;
+}
+
+.wallet-image {
+  width: 200px; /* Adjust as needed */
+  height: auto;
+  margin-right: 20px;
+  border-radius: 8px; /* Optional: for rounded corners */
 }
 
 .wallet-name {

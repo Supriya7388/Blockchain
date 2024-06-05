@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import MarketNavbar from './MarketNavbar';
-
+import Navbar from '../components/Navbar';
 const MarketPage = () => {
   const [news, setNews] = useState([]);
 
@@ -10,18 +9,22 @@ const MarketPage = () => {
 
   const fetchNews = async () => {
     try {
-      const response = await fetch('https://newsapi.org/v2/everything?q=blockchain&apiKey=126c6b3b156d4cf18dc0bac3db3f29a1');
+      const response = await fetch('https://api.currentsapi.services/v1/search?keywords=blockchain&apiKey=0RulcY1oYlStSU7qcS8-A2Pas_Hg-f18zvwJ6n0IOD4s6nt0&limit=20');
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
       const data = await response.json();
-      // Extract only relevant data from the articles and set state
-      const extractedNews = data.articles.map(article => ({
+      console.log('Fetched data:', data); // Log the fetched data for debugging
+
+      // Extract only relevant data from the news and set state
+      const extractedNews = data.news.map(article => ({
         title: article.title,
         description: article.description,
         url: article.url,
-        image: article.urlToImage // Extract image URL
+        image: article.image, // Extract image URL
+        published: article.published  // Adding the published date for dynamic content check
       }));
+
       setNews(extractedNews);
     } catch (error) {
       console.error('Error fetching data:', error);
@@ -30,7 +33,7 @@ const MarketPage = () => {
 
   return (
     <div style={styles.page}>
-      <MarketNavbar />
+    <Navbar />
       <div style={styles.container}>
         <h1 style={styles.heading}>Blockchain News</h1>
         <ul style={styles.list}>
@@ -42,6 +45,7 @@ const MarketPage = () => {
               <div>
                 <h3 style={styles.title}>{article.title}</h3>
                 <p style={styles.description}>{article.description}</p>
+                <p style={styles.published}>Published: {new Date(article.published).toLocaleString()}</p>
                 <a href={article.url} target="_blank" rel="noopener noreferrer" style={styles.link}>Read more</a>
               </div>
             </li>
@@ -54,7 +58,6 @@ const MarketPage = () => {
 
 const styles = {
   page: {
-    // Set the background color of the page
     color: '#333', // Set the text color
   },
   container: {
@@ -63,8 +66,7 @@ const styles = {
   heading: {
     color: '#007bff', // Set the heading color to blue
     fontSize: '24px',
-    marginBottom: '20px',
-  },
+    marginBottom: '20px',},
   list: {
     listStyle: 'none',
     margin: 0,
@@ -89,7 +91,12 @@ const styles = {
   description: {
     fontSize: '16px',
     marginBottom: '10px',
-    color:'white',
+    color: 'white',
+  },
+  published: {
+    fontSize: '14px',
+    marginBottom: '10px',
+    color: 'grey',
   },
   link: {
     color: '#28a745',

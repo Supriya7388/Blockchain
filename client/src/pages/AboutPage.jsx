@@ -1,12 +1,13 @@
-
 import React from 'react';
+import Navbar from '../components/Navbar.jsx';
 
 const AboutPage = () => {
   return (
-    <div className="container mx-auto p-8">
+    <div className="pt-0 "> {/* Adjust pt-16 based on the navbar height */}
+      <Navbar />
       <div className="text-center mb-8">
-        <h1 className="text-4xl font-bold mt-14 text-blue-500">About decentralx</h1>
-        <p className=" mt-19 text-white">Your Trusted Source for Blockchain News and Insights</p>
+        <h1 className="text-4xl font-bold mt-14 text-blue-500">About Decentralx</h1>
+        <p className="mt-4 text-white">Your Trusted Source for Blockchain News and Insights</p> {/* Adjusted mt-19 to mt-4 */}
       </div>
       <div>
         <h2 className="text-2xl font-semibold mb-4 text-blue-500">Our Mission</h2>
@@ -27,7 +28,7 @@ const AboutPage = () => {
           the highest standards of journalism and ethical conduct, ensuring that our readers can trust the information
           they find on our platform. Your satisfaction and trust are our top priorities.
         </p>
-        <h2 className="text-2xl font-semibold mb-4 text-blue text-blue-500">Our Vision</h2>
+        <h2 className="text-2xl font-semibold mb-4 text-blue-500">Our Vision</h2>
         <p className="text-lg mb-6 text-white">
           We envision a future where blockchain technology revolutionizes industries, disrupts traditional systems,
           and empowers individuals to take control of their financial and digital identities. Through our platform,

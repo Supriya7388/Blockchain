@@ -5,7 +5,7 @@ import MarketPage from "./pages/MarketPage";
 import TutorialsPage from "./pages/TutorialsPage";
 import WalletsPage from "./pages/WalletsPage";
 import AboutPage from "./pages/AboutPage";
-import MarketNavbar from "./pages/MarketNavbar"; // Import MarketNavbar
+// import MarketNavbar from "./pages/MarketNavbar"; // Import MarketNavbar
 import LoginPage from './pages/LoginPage';
 import ContactPage from './pages/ContactPage';
 const App = () => (
@@ -24,15 +24,20 @@ const App = () => (
           } />
           <Route path="/market" element={
             <>
-              <MarketNavbar />
+              
               <MarketPage />
             </>
           } />
-          <Route path="/tutorials" element={<TutorialsPage />} />
+          <Route path="/tutorials" element={
+          <>
+          <Navbar />
+          <TutorialsPage />
+
+          </>}/>
           <Route path="/wallets" element={<WalletsPage />} />
           <Route path="/about" element={
             <>
-              <MarketNavbar />
+             
               <AboutPage />
             </>
           } />

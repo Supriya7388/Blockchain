@@ -35,6 +35,8 @@ const Navbar = () => {
         {/* <NavBarItem title="Trade" to="/trade" /> */}
         <NavBarItem title="Tutorials" to="/tutorials" />
         <NavBarItem title="Wallets" to="/wallets" />
+        <NavBarItem title="About" to="/about" />
+        <NavBarItem title="Contact" to="/contact" />
         <li className="bg-blue-500 py-2 px-7 mx-2 rounded-full cursor-pointer hover:bg-[#2546bd]">
           <Link to="/login">Login</Link>
         </li>
